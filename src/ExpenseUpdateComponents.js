@@ -43,7 +43,7 @@ function ExpenseUpdateComponents({ updateDataSubmit, updateData, initUpdate }) {
     return (
         <Container>
             <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader className={type == "income" ? "incomeHeaderBg" : "spendHeaderBg"}>EDIT{' '}</ModalHeader>
+                <ModalHeader className={type == "income" ? "incomeHeaderBg" : "spendHeaderBg"}>EDIT{' '}{type.toUpperCase()}</ModalHeader>
                 <ModalBody>
                     <Row>
                         <Col md="6">

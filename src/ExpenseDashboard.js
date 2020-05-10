@@ -30,6 +30,7 @@ function ExpenseDashboard() {
       })
     }
     calculateIncome(prevState => [...prevState]);
+    updateInitChange(false);
   }
   const submitData = (data) => {
     calculateIncome(prevState => [...prevState, { id: income.length, amount: data.amount, comment: data.comment, type: data.type, addedOnDate: data.addedOnDate }]);
