@@ -23,7 +23,15 @@ function ExpenseDashboard() {
   }
 
   const updateDataSubmit = (data) => {
-    calculateIncome(prevState => [...prevState, ...data]);
+    // calculateIncome(prevState => [...prevState, ...data]);
+    if (data) {
+      income.map((item) => {
+        if (item.id === data.id) {
+          return income.splice(data.id, 1, data);
+        }
+      })
+    }
+    calculateIncome(prevState => [...prevState]);
   }
   const submitData = (data) => {
     calculateIncome(prevState => [...prevState, { id: income.length, amount: data.amount, comment: data.comment, type: data.type, addedOnDate: data.addedOnDate }]);

@@ -9,7 +9,7 @@ function ExpenseUpdateComponents({ updateDataSubmit, updateData, initUpdate }) {
     const [type, setType] = useState('');
     const [amount, setAmount] = useState(0);
     const [comment, setComment] = useState('');
-    const [dataId, updateId] = useState('');
+    const [id, updateId] = useState('');
     const toggle = () => setModal(!modal);
     const handleDateChange = (date) => {
         setDate(date);
@@ -24,17 +24,17 @@ function ExpenseUpdateComponents({ updateDataSubmit, updateData, initUpdate }) {
     }
 
     const submitData = () => {
-        let updateArrr =[];
+        // let updateArrr =[];
         let x = {
-            dataId,
+            id,
             amount,
             comment,
             type,
             addedOnDate: date
         }
-        updateArrr.push(x);
+        // updateArrr.push(x);
         setModal(false);
-        updateDataSubmit(updateArrr);
+        updateDataSubmit(x);
 
     }
 
