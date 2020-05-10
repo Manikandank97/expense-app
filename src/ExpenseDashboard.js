@@ -19,11 +19,9 @@ function ExpenseDashboard() {
   const editData = (data, bool) => {
     updateDataChange(data)
     updateInitChange(bool)
-    // calculateIncome(income.filter(item => item.id !== id));
   }
 
   const updateDataSubmit = (data) => {
-    // calculateIncome(prevState => [...prevState, ...data]);
     if (data) {
       income.map((item) => {
         if (item.id === data.id) {

@@ -24,7 +24,6 @@ function ExpenseUpdateComponents({ updateDataSubmit, updateData, initUpdate }) {
     }
 
     const submitData = () => {
-        // let updateArrr =[];
         let x = {
             id,
             amount,
@@ -32,7 +31,6 @@ function ExpenseUpdateComponents({ updateDataSubmit, updateData, initUpdate }) {
             type,
             addedOnDate: date
         }
-        // updateArrr.push(x);
         setModal(false);
         updateDataSubmit(x);
 
