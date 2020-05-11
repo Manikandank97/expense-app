@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import Logo from './icon-delete.png';
 
 function ExpenseDisplayList({ data, editData }) {
   return (
