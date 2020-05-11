@@ -32,7 +32,7 @@ function ExpenseDisplayList({ data, editData }) {
 
               <Col md={3} xs={3}> {result.comment}</Col>
 
-              <Col md={3} xs={3} className={result.type == 'spending' ? 'spend' : 'income'}>{result.amount}</Col>
+              <Col md={3} xs={3} className={result.type === 'spending' ? 'spend' : 'income'}>{result.amount}</Col>
 
               <Col md={2} xs={1} className="edit-pointer" onClick={() => editData(result, true)}><i className="fa fa-pencil-square-o fa-lg" /></Col>
             </Row>
